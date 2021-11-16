@@ -16,7 +16,7 @@ import com.ontimize.jee.server.dao.DefaultOntimizeDaoHelper;
 
 
 @Lazy
-@Service("EmployeesService")
+@Service("EmployeesProjectsService")
 public class EmployeesProjectsService implements IEmployeesProjectsService {
 
 	@Autowired

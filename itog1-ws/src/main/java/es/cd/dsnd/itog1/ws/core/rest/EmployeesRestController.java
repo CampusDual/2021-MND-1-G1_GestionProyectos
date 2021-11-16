@@ -8,15 +8,15 @@ import es.cd.dsnd.itog1.api.core.service.IEmployeesService;
 import com.ontimize.jee.server.rest.ORestController;
 
 @RestController
-@RequestMapping("/master")
+@RequestMapping("/employees")
 public class EmployeesRestController extends ORestController<IEmployeesService> {
 
  @Autowired
- private IEmployeesService masterService;
+ private IEmployeesService employeesService;
 
  @Override
  public IEmployeesService getService() {
-  return this.masterService;
+  return this.employeesService;
  }
 
 }
