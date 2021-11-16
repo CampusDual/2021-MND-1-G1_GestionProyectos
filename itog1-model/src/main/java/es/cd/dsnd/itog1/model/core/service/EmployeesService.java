@@ -26,24 +26,24 @@ public class EmployeesService implements IEmployeesService {
 	private DefaultOntimizeDaoHelper daoHelper;
 
 	@Override
-	public EntityResult employeesQuery(Map<String, Object> keyMap, List<String> attrList)
+	public EntityResult employeeQuery(Map<String, Object> keyMap, List<String> attrList)
 			throws OntimizeJEERuntimeException {
 		return this.daoHelper.query(this.employeesDao, keyMap, attrList);
 	}
 
 	@Override
-	public EntityResult employeesInsert(Map<String, Object> attrMap) throws OntimizeJEERuntimeException {
+	public EntityResult employeeInsert(Map<String, Object> attrMap) throws OntimizeJEERuntimeException {
 		  return this.daoHelper.insert(this.employeesDao, attrMap);
 	}
 
 	@Override
-	public EntityResult employeesUpdate(Map<String, Object> attrMap, Map<String, Object> keyMap)
+	public EntityResult employeeUpdate(Map<String, Object> attrMap, Map<String, Object> keyMap)
 			throws OntimizeJEERuntimeException {
 		  return this.daoHelper.update(this.employeesDao, attrMap, keyMap);
 	}
 
 	@Override
-	public EntityResult employeesDelete(Map<String, Object> keyMap) throws OntimizeJEERuntimeException {
+	public EntityResult employeeDelete(Map<String, Object> keyMap) throws OntimizeJEERuntimeException {
 		  return this.daoHelper.delete(this.employeesDao, keyMap);
 	}
 

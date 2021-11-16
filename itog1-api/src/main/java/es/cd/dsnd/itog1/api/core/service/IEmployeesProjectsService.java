@@ -9,9 +9,9 @@ import com.ontimize.jee.common.exceptions.OntimizeJEERuntimeException;
 public interface IEmployeesProjectsService {
 
 	 // CANDIDATE
-	 public EntityResult EmployeesProjectsQuery(Map<String, Object> keyMap, List<String> attrList) throws OntimizeJEERuntimeException;
-	 public EntityResult EmployeesProjectsInsert(Map<String, Object> attrMap) throws OntimizeJEERuntimeException;
-	 public EntityResult EmployeesProjectsUpdate(Map<String, Object> attrMap, Map<String, Object> keyMap) throws OntimizeJEERuntimeException;
-	 public EntityResult EmployeesProjectsDelete(Map<String, Object> keyMap) throws OntimizeJEERuntimeException;
+	 public EntityResult employeeProjectQuery(Map<String, Object> keyMap, List<String> attrList) throws OntimizeJEERuntimeException;
+	 public EntityResult employeeProjectInsert(Map<String, Object> attrMap) throws OntimizeJEERuntimeException;
+	 public EntityResult employeeProjectUpdate(Map<String, Object> attrMap, Map<String, Object> keyMap) throws OntimizeJEERuntimeException;
+	 public EntityResult employeeProjectDelete(Map<String, Object> keyMap) throws OntimizeJEERuntimeException;
 
 	}

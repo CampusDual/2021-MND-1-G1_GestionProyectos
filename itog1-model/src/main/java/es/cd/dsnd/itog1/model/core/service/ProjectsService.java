@@ -27,24 +27,24 @@ public class ProjectsService implements IProjectsService {
 	private DefaultOntimizeDaoHelper daoHelper;
 
 	@Override
-	public EntityResult projectsQuery(Map<String, Object> keyMap, List<String> attrList)
+	public EntityResult projectQuery(Map<String, Object> keyMap, List<String> attrList)
 			throws OntimizeJEERuntimeException {
 		return this.daoHelper.query(this.projectsDao, keyMap, attrList);
 	}
 
 	@Override
-	public EntityResult projectsInsert(Map<String, Object> attrMap) throws OntimizeJEERuntimeException {
+	public EntityResult projectInsert(Map<String, Object> attrMap) throws OntimizeJEERuntimeException {
 		  return this.daoHelper.insert(this.projectsDao, attrMap);
 	}
 
 	@Override
-	public EntityResult projectsUpdate(Map<String, Object> attrMap, Map<String, Object> keyMap)
+	public EntityResult projectUpdate(Map<String, Object> attrMap, Map<String, Object> keyMap)
 			throws OntimizeJEERuntimeException {
 		  return this.daoHelper.update(this.projectsDao, attrMap, keyMap);
 	}
 
 	@Override
-	public EntityResult projectsDelete(Map<String, Object> keyMap) throws OntimizeJEERuntimeException {
+	public EntityResult projectDelete(Map<String, Object> keyMap) throws OntimizeJEERuntimeException {
 		  return this.daoHelper.delete(this.projectsDao, keyMap);
 	}
 
