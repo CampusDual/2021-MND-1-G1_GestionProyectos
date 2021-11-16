@@ -54,7 +54,7 @@
 					from
 						${mainschema}.trole tr
 						JOIN ${mainschema}.trole_server_permission trsp ON tr.id_rolename = trsp.id_rolename
-						JOIN ${mainschema}.tserver_permission tsp ON trsp.id_server_permission = tsp.server_permission
+						JOIN ${mainschema}.tserver_permission tsp ON trsp.id_server_permission = tsp.id_server_permission
 					#WHERE#
 					#ORDER#
 					]]>
