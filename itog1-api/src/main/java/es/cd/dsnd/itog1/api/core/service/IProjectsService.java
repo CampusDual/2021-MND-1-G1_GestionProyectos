@@ -8,7 +8,6 @@ import com.ontimize.jee.common.exceptions.OntimizeJEERuntimeException;
 
 public interface IProjectsService {
 
-	 // CANDIDATE
 	 public EntityResult projectQuery(Map<String, Object> keyMap, List<String> attrList) throws OntimizeJEERuntimeException;
 	 public EntityResult projectInsert(Map<String, Object> attrMap) throws OntimizeJEERuntimeException;
 	 public EntityResult projectUpdate(Map<String, Object> attrMap, Map<String, Object> keyMap) throws OntimizeJEERuntimeException;

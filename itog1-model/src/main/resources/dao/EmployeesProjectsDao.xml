@@ -12,4 +12,29 @@
   <Column>id_employee_project</Column>
  </UpdateKeys>
  <GeneratedKey>id_employee_project</GeneratedKey>
+ 
+  <Queries>
+  <Query id="details">
+   <AmbiguousColumns>
+    <AmbiguousColumn name="employee_name" prefix="e"
+     databaseName="name" />
+    <AmbiguousColumn name="project_name" prefix="p"
+     databaseName="name" />
+   </AmbiguousColumns>
+   <Sentence>
+   <![CDATA[
+     SELECT
+      #COLUMNS#
+     FROM
+      public.employees_projects ep
+     INNER JOIN public.employees e ON
+      ep.id_employee = e.id
+     INNER JOIN public.projects p ON
+      ep.id_project = p.id
+     #WHERE#
+   ]]>
+   </Sentence>
+  </Query>
+ </Queries>
+ 
 </JdbcEntitySetup>

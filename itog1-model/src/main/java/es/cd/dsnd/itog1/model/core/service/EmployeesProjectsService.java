@@ -47,4 +47,9 @@ public class EmployeesProjectsService implements IEmployeesProjectsService {
 		  return this.daoHelper.delete(this.employeesProjectsDao, keyMap);
 	}
 
+	 @Override
+	 public EntityResult employeeProjectDetailsQuery(Map<String, Object> keyMap, List<String> attrList)
+	   throws OntimizeJEERuntimeException {
+	  return this.daoHelper.query(this.employeesProjectsDao, keyMap, attrList, EmployeesProjectsDao.QUERY_DETAILS);
+	 }
 }
