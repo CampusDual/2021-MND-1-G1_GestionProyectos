@@ -1,0 +1,9 @@
+<o-form-layout-manager title="{{'PROJECTS' | oTranslate }}" separator=" " mode="tab" label-columns="name">
+  <div fxFill>
+   <o-table fxFlex attr="projectsTable" service="projects" entity="project" keys="id"
+     columns="id;name"
+     visible-columns="id;name"
+     query-rows="15">
+   </o-table>
+  </div>
+ </o-form-layout-manager>
