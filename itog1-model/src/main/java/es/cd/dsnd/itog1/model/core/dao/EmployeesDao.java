@@ -11,7 +11,7 @@ import com.ontimize.jee.server.dao.jdbc.OntimizeJdbcDaoSupport;
 @ConfigurationFile(configurationFile = "dao/EmployeesDao.xml", configurationFilePlaceholder = "dao/placeholders.properties")
 public class EmployeesDao extends OntimizeJdbcDaoSupport{
 	
-	 public static final String ATTR_ID = "id_employee";
+	 public static final String ATTR_ID = "id";
 	 public static final String ATTR_NAME = "name";
 	 public static final String ATTR_SURNAME = "surname";
 	
