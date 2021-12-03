@@ -28,9 +28,9 @@
      FROM
       public.employees_projects ep
      INNER JOIN public.employees e ON
-      ep.id_employee = e.id
+      ep.id_employee = e.id_employee
      INNER JOIN public.projects p ON
-      ep.id_project = p.id
+      ep.id_project = p.id_project
      #WHERE#
    ]]>
    </Sentence>

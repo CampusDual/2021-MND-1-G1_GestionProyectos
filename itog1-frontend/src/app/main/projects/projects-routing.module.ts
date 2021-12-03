@@ -15,7 +15,7 @@ const routes: Routes = [
     component: ProjectsNewComponent
   },
   {
-    path: ":id",
+    path: ":id_project",
     component: ProjectsDetailComponent
   }
 ];

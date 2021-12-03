@@ -1,5 +1,5 @@
-<o-form service="employees" entity="employee" keys="id" header-actions="R;I;U;D" show-header-navigation="yes">
-  <o-integer-input attr="id" sql-type="INTEGER" enabled="no"></o-integer-input>
+<o-form service="employees" entity="employee" keys="id_employee" header-actions="R;I;U;D" show-header-navigation="yes">
+  <o-integer-input attr="id_employee" sql-type="INTEGER" enabled="no"></o-integer-input>
   <o-row>
     <o-column title-label="EMPLOYEE_PERSONAL_INFORMATION" fxFlex>
       <o-row>
@@ -8,4 +8,15 @@
       </o-row>
     </o-column>
   </o-row>
+<o-row>
+  <o-column title="{{ 'EMPLOYEES_PERSONAL_INFORMATION' | oTranslate }}">
+  <o-table fxFlex service="employeesProjects" entity="employeeProject" parent-keys="id_employee"
+     columns="id_employee_project;id_employee;id_project;employee_involvement_in_project"
+     visible-columns="id_project;employee_involvement_in_project"
+     insert-button="no" query-rows="5">
+     <o-table-column attr="id_project" title="id_project" class="o-table-column-centered"></o-table-column>
+     <o-table-column attr="employee_involvement_in_project" title="employee_involvement_in_project" class="o-table-column-centered"></o-table-column>
+  </o-table>
+</o-column>
+</o-row>
 </o-form>
