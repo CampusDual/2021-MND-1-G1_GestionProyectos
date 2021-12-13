@@ -30,5 +30,8 @@
   "employee_involvement_in_project": "% of Involvement in Project",
   "id_employee": "Employee ID",
   "id_project": "Project ID",
-  "id_employee_project": "Assignment ID"
+  "id_employee_project": "Assignment ID",
+  "employee_name": "Employee Name",
+  "project_name": "Project Name",
+  "MODULES": "Modules"
 }

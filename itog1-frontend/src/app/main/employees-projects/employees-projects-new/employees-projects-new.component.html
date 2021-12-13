@@ -1,11 +1,12 @@
-<o-form service="employees" entity="employeeProject" keys="id_employee_project" header-actions="R;I;U;D" show-header-navigation="yes">
-  <o-row>
-    <o-column title-label="EMPLOYEE_PROJECT_INFORMATION" fxFlex>
+<o-form service="employees" entity="employeeProjectDetails" keys="id_employee_project" header-actions="R;I;U;D" show-header-navigation="yes">
       <o-row>
         <o-text-input class="input-padding" attr="id_employee" required="yes" fxFlex="40"></o-text-input>
+        <o-text-input class="input-padding" attr="employee_name" required="yes" enabled="no" fxFlex="40"></o-text-input>
+        <o-text-input class="input-padding" attr="surname" required="yes" enabled="no" fxFlex="40"></o-text-input>
+      </o-row>
+      <o-row>
         <o-text-input class="input-padding" attr="id_project" required="yes" fxFlex="40"></o-text-input>
+        <o-text-input class="input-padding" attr="project_name" required="yes" enabled="no" fxFlex="40"></o-text-input>
         <o-text-input class="input-padding" attr="employee_involvement_in_project" required="yes" fxFlex="40"></o-text-input>
       </o-row>
-    </o-column>
-  </o-row>
 </o-form>

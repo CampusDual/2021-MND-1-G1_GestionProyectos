@@ -1,8 +1,8 @@
-<o-form-layout-manager title="{{'EMPLOYEESPROJECTS' | oTranslate }}" separator=" " mode="tab" label-columns="id_employee_project">
+<o-form-layout-manager title="{{'EMPLOYEESPROJECTS' | oTranslate }}" separator=" " mode="tab" label-columns="project_name">
   <div fxFill>
-   <o-table fxFlex attr="employeesProjectsTable" service="employees" entity="employeeProject" keys="id_employee_project"
-     columns="id_employee_project;id_employee;id_project;employee_involvement_in_project"
-     visible-columns="id_employee_project; id_employee; id_project;employee_involvement_in_project"
+   <o-table fxFlex attr="employeesProjectsTable" service="employees" entity="employeeProjectDetails" keys="id_employee_project"
+     columns="id_employee_project;id_employee;id_project;employee_involvement_in_project;project_name;employee_name;surname"
+     visible-columns="employee_name;surname;employee_involvement_in_project;project_name"
      query-rows="15">
    </o-table>
   </div>
