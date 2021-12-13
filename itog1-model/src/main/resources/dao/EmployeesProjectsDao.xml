@@ -20,6 +20,14 @@
      databaseName="name" />
     <AmbiguousColumn name="project_name" prefix="p"
      databaseName="name" />
+<!--      <AmbiguousColumn name="id_employee_e" prefix="e" -->
+<!--      databaseName="id_employee" /> -->
+<!--      <AmbiguousColumn name="id_project_p" prefix="p" -->
+<!--      databaseName="id_project" /> -->
+     <AmbiguousColumn name="id_employee" prefix="ep"
+     databaseName="id_employee" />
+     <AmbiguousColumn name="id_project" prefix="ep"
+     databaseName="id_project" />
    </AmbiguousColumns>
    <Sentence>
    <![CDATA[

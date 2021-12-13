@@ -12,5 +12,10 @@ public interface IEmployeesService {
 	 public EntityResult employeeInsert(Map<String, Object> attrMap) throws OntimizeJEERuntimeException;
 	 public EntityResult employeeUpdate(Map<String, Object> attrMap, Map<String, Object> keyMap) throws OntimizeJEERuntimeException;
 	 public EntityResult employeeDelete(Map<String, Object> keyMap) throws OntimizeJEERuntimeException;
+	 public EntityResult employeeProjectQuery(Map<String, Object> keyMap, List<String> attrList) throws OntimizeJEERuntimeException;
+	 public EntityResult employeeProjectInsert(Map<String, Object> attrMap) throws OntimizeJEERuntimeException;
+	 public EntityResult employeeProjectUpdate(Map<String, Object> attrMap, Map<String, Object> keyMap) throws OntimizeJEERuntimeException;
+	 public EntityResult employeeProjectDelete(Map<String, Object> keyMap) throws OntimizeJEERuntimeException;
+	 public EntityResult employeeProjectDetailsQuery(Map<String, Object> keyMap, List<String> attrList) throws OntimizeJEERuntimeException;
 
 	}

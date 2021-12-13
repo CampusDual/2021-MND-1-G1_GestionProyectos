@@ -10,9 +10,9 @@
   </o-row>
 <o-row>
   <o-column title="{{ 'EMPLOYEES_PERSONAL_INFORMATION' | oTranslate }}">
-  <o-table fxFlex service="employeesProjects" entity="employeeProject" parent-keys="id_employee"
-     columns="id_employee_project;id_employee;id_project;employee_involvement_in_project"
-     visible-columns="id_project;employee_involvement_in_project"
+  <o-table fxFlex service="employees" entity="employeeProjectDetails" parent-keys="id_employee"
+     columns="id_employee_project;id_employee;id_project;employee_involvement_in_project;project_name"
+     visible-columns="id_project;employee_involvement_in_project;project_name"
      insert-button="no" query-rows="5">
      <o-table-column attr="id_project" title="id_project" class="o-table-column-centered"></o-table-column>
      <o-table-column attr="employee_involvement_in_project" title="employee_involvement_in_project" class="o-table-column-centered"></o-table-column>
