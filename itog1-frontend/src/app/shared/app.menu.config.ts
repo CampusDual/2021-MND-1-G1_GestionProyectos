@@ -5,8 +5,8 @@ export const MENU_CONFIG: MenuRootItem[] = [
   {
     id: 'modules', name: 'MODULES', icon: 'remove_red_eye', opened: true,
     items: [
-      { id: 'employees', name: 'EMPLOYEES', icon: 'business_center', route: '/main/employees'},
-      { id: 'projects', name: 'PROJECTS', icon: 'people', route: '/main/projects'},
+      { id: 'employees', name: 'EMPLOYEES', icon: 'people', route: '/main/employees'},
+      { id: 'projects', name: 'PROJECTS', icon: 'business_center', route: '/main/projects'},
       { id: 'employeesProjects', name: 'EMPLOYEESPROJECTS', icon: 'account_balance', route: '/main/employeesProjects'},
          ]
   },

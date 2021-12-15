@@ -33,5 +33,7 @@
   "id_employee_project": "ID Asignación",
   "employee_name": "Nombre del Empleado",
   "project_name": "Nombre del Proyecto",
-  "MODULES": "Módulos"
+  "MODULES": "Módulos",
+  "PROJECTS_ASSIGNMENTS": "Asignaciones de Proyectos",
+  "EMPLOYEES_ASSIGNMENTS": "Asignaciones de Empleados"
 }

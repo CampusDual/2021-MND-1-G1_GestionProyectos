@@ -1,15 +1,14 @@
 <o-form service="projects" entity="project" keys="id_project" header-actions="R;I;U;D" show-header-navigation="yes">
   <o-integer-input attr="id_project" sql-type="INTEGER" enabled="no"></o-integer-input>
-      <o-row>
-        <o-text-input class="input-padding" attr="name" required="yes" fxFlex="40"></o-text-input>
-      </o-row>
   <o-row>
-    <o-column title="{{ 'PROJECT_INFORMATION' | oTranslate }}">
+    <o-text-input class="input-padding" attr="name" required="yes" fxFlex="40"></o-text-input>
+  </o-row>
+  <o-row>
+    <o-column title="{{ 'EMPLOYEES_ASSIGNMENTS' | oTranslate }}">
     <o-table fxFlex service="employees" entity="employeeProjectDetails" parent-keys="id_project"
        columns="id_employee_project;id_employee;id_project;employee_involvement_in_project;employee_name"
-       visible-columns="employee_name;employee_involvement_in_project"
-       insert-button="no" query-rows="5">
+       visible-columns="employee_name;employee_involvement_in_project" query-rows="5">
        </o-table>
-  </o-column>
+    </o-column>
   </o-row>
 </o-form>

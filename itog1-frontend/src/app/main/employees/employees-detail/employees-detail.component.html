@@ -5,12 +5,11 @@
         <o-text-input class="input-padding" attr="surname" required="yes" fxFlex="40"></o-text-input>
   </o-row>
 <o-row>
-  <o-column title="{{ 'EMPLOYEE_PERSONAL_INFORMATION' | oTranslate }}">
+  <o-column title="{{ 'PROJECTS_ASSIGNMENTS' | oTranslate }}">
   <o-table fxFlex service="employees" entity="employeeProjectDetails" parent-keys="id_employee"
      columns="id_employee_project;id_employee;id_project;employee_involvement_in_project;project_name"
-     visible-columns="project_name;employee_involvement_in_project"
-     insert-button="no" query-rows="5">
-     </o-table>
-</o-column>
+     visible-columns="project_name;employee_involvement_in_project" query-rows="5">
+  </o-table>
+  </o-column>
 </o-row>
 </o-form>
