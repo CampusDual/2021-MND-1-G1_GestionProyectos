@@ -1,5 +1,7 @@
 package es.cd.dsnd.itog1.model.core.service;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -12,6 +14,7 @@ import es.cd.dsnd.itog1.model.core.dao.EmployeesDao;
 import es.cd.dsnd.itog1.model.core.dao.EmployeesProjectsDao;
 
 import com.ontimize.jee.common.dto.EntityResult;
+import com.ontimize.jee.common.dto.EntityResultMapImpl;
 import com.ontimize.jee.common.exceptions.OntimizeJEERuntimeException;
 import com.ontimize.jee.server.dao.DefaultOntimizeDaoHelper;
 
@@ -59,9 +62,46 @@ public class EmployeesService implements IEmployeesService {
 		return this.daoHelper.query(this.employeesProjectsDao, keyMap, attrList);
 	}
 
+//	@Override
+//	public EntityResult employeeProjectInsert(Map<String, Object> attrMap) 
+//			throws OntimizeJEERuntimeException {
+//	return this.daoHelper.insert(this.employeesProjectsDao, attrMap);
+//	}
 	@Override
 	public EntityResult employeeProjectInsert(Map<String, Object> attrMap) throws OntimizeJEERuntimeException {
-		  return this.daoHelper.insert(this.employeesProjectsDao, attrMap);
+			Map<String, Object> employee_id = new HashMap<String, Object>();
+			employee_id.put(EmployeesProjectsDao.ATTR_ID_EMPLOYEE, attrMap.get(EmployeesProjectsDao.ATTR_ID_EMPLOYEE));
+			List<String> projectList = new ArrayList<String>();
+			projectList.add(EmployeesProjectsDao.ATTR_ID_PROJECT);
+			projectList.add(EmployeesProjectsDao.ATTR_EP);
+			
+		  EntityResult employeeProjectQuery = this.employeeProjectQuery(employee_id, projectList);
+		  	  
+		  
+		  if (employeeProjectQuery.getCode() != EntityResult.OPERATION_WRONG && employeeProjectQuery.calculateRecordNumber() > 0) {
+			List<Integer> object = (List<Integer>) employeeProjectQuery.get(EmployeesProjectsDao.ATTR_EP);
+			int suma = 0;
+			for(int actual : object) {
+				suma += actual;
+			}
+			int value = (int) attrMap.get(EmployeesProjectsDao.ATTR_EP);
+			suma = suma + value;
+			if(suma <= 100) {
+				return this.daoHelper.insert(this.employeesProjectsDao, attrMap);
+			} else {
+				EntityResult toret = new EntityResultMapImpl();
+				toret.setCode(EntityResult.OPERATION_WRONG);
+				toret.setMessage("La suma del % de implicación de un empleado no puede superar el 100%");
+				return toret;
+			}
+			
+		  } else {
+			  if(employeeProjectQuery.getCode() == EntityResult.OPERATION_WRONG) {
+				  return employeeProjectQuery;  
+			  }else {
+					return this.daoHelper.insert(this.employeesProjectsDao, attrMap);
+			  }
+		  }  
 	}
 
 	@Override
