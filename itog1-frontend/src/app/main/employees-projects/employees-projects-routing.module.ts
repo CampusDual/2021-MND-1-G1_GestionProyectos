@@ -6,16 +6,16 @@ import { EmployeesProjectsNewComponent } from "./employees-projects-new/employee
 
 const routes: Routes = [
   {
-    path: "",
+    path: '',
     component: EmployeesProjectsHomeComponent,
   },
   {
-    path: "new",
+    path: 'new',
     component: EmployeesProjectsNewComponent,
   },
   {
-    path: ":id_employee_project",
-    component: EmployeesProjectsDetailComponent,
+    path: ':id_employee_project',
+    component: EmployeesProjectsDetailComponent
   },
 ];
 

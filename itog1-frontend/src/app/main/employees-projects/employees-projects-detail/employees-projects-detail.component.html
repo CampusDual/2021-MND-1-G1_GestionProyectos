@@ -1,18 +1,11 @@
 <o-form service="employees" entity="employeeProject" keys="id_employee_project" header-actions="R;I;U;D" show-header-navigation="yes">
   <o-integer-input attr="id_employee_project" sql-type="INTEGER" enabled="no"></o-integer-input>
-  <o-row>
     <o-list-picker service="employees" entity="employee" attr="id_employee" value-column="id_employee" columns="id_employee;name;surname"
     visible-columns="surname;name" separator=", " required="yes">
     </o-list-picker>
-  </o-row>
-  <o-row>
     <o-list-picker service="projects" entity="project" attr="id_project" value-column="id_project" columns="id_project;name"
         visible-columns="name" separator=", " required="yes">
     </o-list-picker>
-  </o-row>
-  <o-row>
-    <o-text-input service="employees" entity="employeeProject" keys="id_employee_project" columns="id_employee;id_project;employee_involvement_in_project"
-    attr="employee_involvement_in_project" required="yes" fxFlex="40"></o-text-input>
-  </o-row>
+    <o-integer-input attr="employee_involvement_in_project" required="yes" fxFlex="40"></o-integer-input>
 </o-form>
 

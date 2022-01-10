@@ -1,3 +1,19 @@
-.bg {
-  background-color: darkred;
+.full-page {
+  border: 4px solid firebrick;
+  border-radius: 15px;
+  background-color: rgba(32, 92, 204, 0.349);
+  // background-color: rgba(32, 92, 204, 0.116);
+  background-image: url('^assets/images/background-img.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: calc(100%);
+  // width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
 }
+
+// border: 10px dotted (puntos) double (raya doble) solid (linea única) dashed (rayado)
+// groove ridge inset outset
+// none (sin borde) hidden (oculto)

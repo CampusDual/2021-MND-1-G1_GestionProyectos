@@ -1,0 +1,11 @@
+<div class="full-page">
+<o-form service="employees" entity="employeeProject" keys="id_employee_project" header-actions="R;I" show-header-navigation="no">
+  <o-list-picker service="projects" entity="project" attr="id_project" value-column="id_project" columns="id_project;name"
+      visible-columns="name" separator=", " required="yes"  enabled="no">
+  </o-list-picker>
+  <o-list-picker service="employees" entity="employee" attr="id_employee" value-column="id_employee" columns="id_employee;name;surname"
+  visible-columns="surname;name" separator=", " required="yes">
+  </o-list-picker>
+  <o-integer-input attr="employee_involvement_in_project" required="yes" fxFlex="40"></o-integer-input>
+</o-form>
+</div>

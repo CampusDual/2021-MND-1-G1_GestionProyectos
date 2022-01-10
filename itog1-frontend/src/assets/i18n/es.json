@@ -26,7 +26,7 @@
   "EMPLOYEE_PERSONAL_INFORMATION": "Detalle del empleado",
   "PROJECTS": "Proyectos",
   "PROJECT_INFORMATION": "Detalles del Proyecto",
-  "EMPLOYEESPROJECTS": "Asignaciones de Proyectos",
+  "EMPLOYEESPROJECTS": "Asignaciones",
   "employee_involvement_in_project": "% de Implicación en el Proyecto",
   "id_employee": "ID Empleado",
   "id_project": "ID Proyecto",
@@ -35,5 +35,10 @@
   "project_name": "Nombre del Proyecto",
   "MODULES": "Módulos",
   "PROJECTS_ASSIGNMENTS": "Asignaciones de Proyectos",
-  "EMPLOYEES_ASSIGNMENTS": "Asignaciones de Empleados"
+  "EMPLOYEES_ASSIGNMENTS": "Asignaciones de Empleados",
+  "TOTAL_EMPLOYEES": "Nº Empleados",
+  "TOTAL_PROJECTS": "Nº Proyectos",
+  "OPEN_ASSIGNMENT_SELECTED": "Abrir Asignación",
+  "PERCENTAGE_OF_OCCUPATION": "% Ocupación",
+  "TOTAL_ASSIGNMENTS": "Nº Asignaciones"
 }

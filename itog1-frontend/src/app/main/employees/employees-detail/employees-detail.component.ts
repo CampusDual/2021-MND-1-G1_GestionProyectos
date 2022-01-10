@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
+import { OTableComponent } from 'ontimize-web-ngx';
 
 @Component({
   selector: 'app-employees-detail',
@@ -7,7 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EmployeesDetailComponent implements OnInit {
 
-  constructor() { }
+  @ViewChild('employeesTable', { static: false }) employeesProjectsTable: OTableComponent;
+
+  constructor(
+    private router: Router
+  ) { }
+
+  public openAssignmentDetailSelected() {
+    let selected = this.employeesProjectsTable.getSelectedItems();
+    if (selected.length === 1) {
+      let id_employee = selected[0]['id_employee'];
+      let id_employee_project = selected[0]['id_employee_project'];
+      this.router.navigate(['main/employeesProjects/' + id_employee + '/' + id_employee_project], { queryParams: { isdetail: true } });
+    }
+  }
 
   ngOnInit() {
   }

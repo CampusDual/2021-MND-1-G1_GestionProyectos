@@ -8,7 +8,7 @@ export const routes: Routes = [
 ];
 
 const opt = {
-  enableTracing: false
+  enableTracing: true
   // true if you want to print navigation routes
 };
 

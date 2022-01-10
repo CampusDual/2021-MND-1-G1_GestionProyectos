@@ -1,9 +1,11 @@
+<div class="full-page">
 <o-form-layout-manager title="{{'EMPLOYEESPROJECTS' | oTranslate }}" separator=" " mode="tab" label-columns="id_project;project_name">
   <div fxFill>
-   <o-table fxFlex attr="employeesProjectsTable" service="employees" entity="employeeProjectDetails" keys="id_employee_project"
+   <o-table fxFlex #employeesProjectsTable attr="employeesProjectsTable" service="employees" entity="employeeProjectDetails" keys="id_employee_project"
      columns="id_employee_project;id_employee;id_project;employee_involvement_in_project;project_name;employee_name;surname"
      visible-columns="project_name;employee_name;surname;employee_involvement_in_project"
      query-rows="15" delete-button="no">
    </o-table>
   </div>
  </o-form-layout-manager>
+</div>

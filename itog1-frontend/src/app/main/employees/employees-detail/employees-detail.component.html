@@ -1,15 +1,15 @@
 <o-form service="employees" entity="employee" keys="id_employee" header-actions="R;I;U;D" show-header-navigation="yes">
   <o-integer-input attr="id_employee" sql-type="INTEGER" enabled="no"></o-integer-input>
   <o-row>
-        <o-text-input class="input-padding" attr="name" required="yes" fxFlex="40"></o-text-input>
-        <o-text-input class="input-padding" attr="surname" required="yes" fxFlex="40"></o-text-input>
+    <o-text-input class="input-padding" attr="name" required="yes" fxFlex="40"></o-text-input>
+    <o-text-input class="input-padding" attr="surname" required="yes" fxFlex="40"></o-text-input>
   </o-row>
-<o-row>
   <o-column title="{{ 'PROJECTS_ASSIGNMENTS' | oTranslate }}">
-  <o-table fxFlex service="employees" entity="employeeProjectDetails" parent-keys="id_employee"
-     columns="id_employee_project;id_employee;id_project;employee_involvement_in_project;project_name"
-     visible-columns="project_name;employee_involvement_in_project" query-rows="5">
-  </o-table>
-  </o-column>
-</o-row>
+    <o-table #employeesTable attr="employeesTable" service="employees" entity="employeeProjectDetails" parent-keys="id_employee"
+    keys="id_employee_project" columns="id_employee;employee_name;surname;id_project;project_name;id_employee_project;employee_involvement_in_project"
+    visible-columns="project_name;employee_involvement_in_project" insert-button="yes" delete-button="no"
+    detail-mode="click">
+    </o-table>
+    <!-- <o-button (click)="openAssignmentDetailSelected()" label="{{ 'OPEN_ASSIGNMENT_SELECTED' | oTranslate }}"></o-button> -->
+    </o-column>
 </o-form>
