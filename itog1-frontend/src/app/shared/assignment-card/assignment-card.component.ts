@@ -24,7 +24,7 @@ export class AssignmentCardComponent implements OnInit {
       res => {
         if (res.data && res.data.length) {
           this.totalAssignments = res.data.length;
-          this.assignmentPercentage = res.data.filter((e: any) => e['employee_involvement_in_project']).length;
+          // this.assignmentPercentage = res.data.
         }else{
           this.totalAssignments = undefined;
         }
