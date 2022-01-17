@@ -13,16 +13,20 @@ import { OntimizeService } from 'ontimize-web-ngx';
 export class EmployeeCardComponent implements OnInit {
 
   public employeeAmount: number;
+  public developersAmount: number;
+  public inChargeAmount: number;
 
   constructor(
     private ontimizeService: OntimizeService,
     private cd: ChangeDetectorRef,
   ) {
     this.ontimizeService.configureService(this.ontimizeService.getDefaultServiceConfiguration('employees'));
-    this.ontimizeService.query(undefined, ['id_employee'], 'employee').subscribe(
+    this.ontimizeService.query(undefined, ['id_employee', 'job'], 'employee').subscribe(
       res => {
         if (res.data && res.data.length) {
           this.employeeAmount = res.data.length;
+          this.developersAmount = res.data.filter((e: any) => e['job'] === 1).length;
+          this.inChargeAmount = res.data.filter((e: any) => e['job'] === 2).length;
         }else{
           this.employeeAmount = undefined;
         }

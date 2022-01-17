@@ -9,8 +9,8 @@ export const MENU_CONFIG: MenuRootItem[] = [
     id: 'modules', name: 'MODULES', icon: 'remove_red_eye', opened: true,
     items: [
       { id: 'employees', name: 'EMPLOYEES', icon: 'people', route: '/main/employees', component: EmployeeCardComponent},
-      { id: 'projects', name: 'PROJECTS', icon: 'business_center', route: '/main/projects', component: ProjectCardComponent},
       { id: 'employeesProjects', name: 'EMPLOYEESPROJECTS', icon: 'account_balance', route: '/main/employeesProjects', component: AssignmentCardComponent},
+      { id: 'projects', name: 'PROJECTS', icon: 'business_center', route: '/main/projects', component: ProjectCardComponent},
          ]
   },
   { id: 'logout', name: 'LOGOUT', route: '/login', icon: 'power_settings_new', confirm: 'yes' }

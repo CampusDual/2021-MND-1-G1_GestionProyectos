@@ -33,6 +33,8 @@
   "id_employee_project": "ID Asignación",
   "employee_name": "Nombre del Empleado",
   "project_name": "Nombre del Proyecto",
+  "status": "Estado",
+  "job": "Cargo",
   "MODULES": "Módulos",
   "PROJECTS_ASSIGNMENTS": "Asignaciones de Proyectos",
   "EMPLOYEES_ASSIGNMENTS": "Asignaciones de Empleados",
@@ -40,5 +42,17 @@
   "TOTAL_PROJECTS": "Nº Proyectos",
   "OPEN_ASSIGNMENT_SELECTED": "Abrir Asignación",
   "PERCENTAGE_OF_OCCUPATION": "% Ocupación",
-  "TOTAL_ASSIGNMENTS": "Nº Asignaciones"
+  "TOTAL_ASSIGNMENTS": "Nº Asignaciones",
+  "PENDING_PROJECTS": "Pendientes",
+  "INPROCESS_PROJECTS": "En curso",
+  "FINISHED_PROJECTS": "Terminados",
+  "Pending": "Pendinte",
+  "Working": "En curso",
+  "Finished": "Finalizado",
+  "Developer": "Desarrollador/a",
+  "In Charge": "Encargado/a",
+  "Select status": "Seleccionar estado",
+  "Select job": "Seleccionar cargo",
+  "DEVELOPERS": "Desarrolladores",
+  "INCHARGE": "Encargados"
 }

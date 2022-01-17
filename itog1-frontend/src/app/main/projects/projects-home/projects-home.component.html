@@ -1,9 +1,18 @@
 <div class="full-page">
 <o-form-layout-manager title="{{'PROJECTS' | oTranslate }}" separator=" " mode="tab" label-columns="name">
-  <div fxFill>
-   <o-table fxFlex attr="projectsTable" service="projects" entity="project" keys="id_project"
-     columns="id_project;name" visible-columns="name" delete-button="no" query-rows="15">
-   </o-table>
-  </div>
+  <o-table fxFill service="projects" entity="project" keys="id_project"
+  columns="name;status" delete-button="no" query-rows="15">
+    <!-- <o-table-row-expandable>
+      <ng-template let-row>
+        <o-expandable-container [targets]="[projectsTable]" [data]="row">
+          <o-table #projectsTable attr="projectsTable" service="employees" entity="employeeProjectDetails" parent-keys="id_project"
+          keys="id_employee_project" columns="id_employee_project;id_employee;id_project;employee_involvement_in_project;employee_name;surname"
+          visible-columns="employee_name;employee_involvement_in_project;surname" delete-button="no" insert-button="no"
+          query-rows="5">
+          </o-table>
+        </o-expandable-container>
+      </ng-template>
+    </o-table-row-expandable> -->
+  </o-table>
  </o-form-layout-manager>
 </div>

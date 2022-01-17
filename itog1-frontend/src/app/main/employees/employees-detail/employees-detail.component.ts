@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
-import { OTableComponent } from 'ontimize-web-ngx';
+import { OComboComponent, OTableComponent } from 'ontimize-web-ngx';
 
 @Component({
   selector: 'app-employees-detail',
@@ -23,6 +23,16 @@ export class EmployeesDetailComponent implements OnInit {
       this.router.navigate(['main/employeesProjects/' + id_employee + '/' + id_employee_project], { queryParams: { isdetail: true } });
     }
   }
+
+  @ViewChild('job', {static: true}) job: OComboComponent;
+
+  public jobArray = [{
+    jobCode: 1,
+    jobText: 'Developer'
+  },{
+    jobCode: 2,
+    jobText: 'In Charge'
+  }];
 
   ngOnInit() {
   }

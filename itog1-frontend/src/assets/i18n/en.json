@@ -33,6 +33,8 @@
   "id_employee_project": "Assignment ID",
   "employee_name": "Employee Name",
   "project_name": "Project Name",
+  "status": "Status",
+  "job": "Job",
   "MODULES": "Modules",
   "PROJECTS_ASSIGNMENTS": "Projects Assignments",
   "EMPLOYEES_ASSIGNMENTS": "Employees Assignments",
@@ -40,5 +42,10 @@
   "TOTAL_PROJECTS": "Projects",
   "OPEN_ASSIGNMENT_SELECTED": "Open Assignment",
   "PERCENTAGE_OF_OCCUPATION": "% Ocupación",
-  "TOTAL_ASSIGNMENTS": "Assignments"
+  "TOTAL_ASSIGNMENTS": "Assignments",
+  "PENDING_PROJECTS": "Pending",
+  "INPROCESS_PROJECTS": "In process",
+  "FINISHED_PROJECTS": "Finished",
+  "DEVELOPERS": "Developers",
+  "INCHARGE": "In charge"
 }

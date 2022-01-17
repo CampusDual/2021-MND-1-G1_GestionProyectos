@@ -1,3 +1,9 @@
 <o-form service="projects" entity="project" keys="id_project" header-actions="R;I;U;D" show-header-navigation="yes">
-        <o-text-input class="input-padding" attr="name" required="yes" fxFlex="40"></o-text-input>
+  <o-text-input class="input-padding" attr="name" required="yes" fxFlex="40"></o-text-input>
+  <o-row>
+  <o-combo attr="status" read-only="no" label="Select status" [static-data]="statusArray"
+  [data]="selectedStatusCode" value-column="statusCode" columns="statusCode;statusText"
+   visible-columns="statusText" [data]="10" null-selection="no" required="yes" translate="yes">
+  </o-combo>
+  </o-row>
 </o-form>
