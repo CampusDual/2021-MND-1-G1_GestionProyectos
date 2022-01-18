@@ -8,7 +8,6 @@
       value-column="statusCode" columns="statusCode;statusText"
       visible-columns="statusText" null-selection="no" required="yes" translate="yes">
     </o-combo>
-
   </o-row>
     <o-column title="{{ 'EMPLOYEES_ASSIGNMENTS' | oTranslate }}">
     <o-table #projectsTable attr="projectsTable" service="employees" entity="employeeProjectDetails" parent-keys="id_project"

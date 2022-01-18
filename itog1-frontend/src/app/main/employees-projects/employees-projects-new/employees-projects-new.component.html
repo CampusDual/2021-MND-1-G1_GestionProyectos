@@ -1,12 +1,12 @@
 <o-form service="employees" entity="employeeProject" keys="id_employee_project" header-actions="R;I;U;D" show-header-navigation="yes">
   <o-row>
-    <o-list-picker service="employees" entity="employee" attr="id_employee" value-column="id_employee" columns="id_employee;name;surname;job"
-    visible-columns="job;surname;name" separator=", " required="yes">
+    <o-list-picker service="employees" entity="employeeDetails" attr="id_employee" value-column="id_employee" columns="id_employee;name;surname;job_name"
+    visible-columns="job_name;surname;name" separator=", " required="yes" label="EMPLOYEE">
     </o-list-picker>
   </o-row>
   <o-row>
-    <o-list-picker service="projects" entity="project" attr="id_project" value-column="id_project" columns="id_project;name;status"
-        visible-columns="name;status" separator=", " required="yes">
+    <o-list-picker service="projects" entity="projectDetails" attr="id_project" value-column="id_project" columns="id_project;name;status_name"
+        visible-columns="name;status_name" separator=" // " required="yes" label="PROJECT">
     </o-list-picker>
   </o-row>
   <o-row>

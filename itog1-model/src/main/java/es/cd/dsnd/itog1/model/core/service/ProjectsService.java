@@ -58,27 +58,42 @@ public class ProjectsService implements IProjectsService {
 		return this.daoHelper.query(this.projectStatusDao, keyMap, attrList);
 	}
 
-	@Override
-	public EntityResult projectStatusInsert(Map<String, Object> attrMap) throws OntimizeJEERuntimeException {
-		  return this.daoHelper.insert(this.projectStatusDao, attrMap);
-	}
-
-	@Override
-	public EntityResult projectStatusUpdate(Map<String, Object> attrMap, Map<String, Object> keyMap)
-			throws OntimizeJEERuntimeException {
-		  return this.daoHelper.update(this.projectStatusDao, attrMap, keyMap);
-	}
-
-	@Override
-	public EntityResult projectStatusDelete(Map<String, Object> keyMap) throws OntimizeJEERuntimeException {
-		  return this.daoHelper.delete(this.projectStatusDao, keyMap);
-	}
-	
+//	@Override
+//	public EntityResult projectStatusInsert(Map<String, Object> attrMap) throws OntimizeJEERuntimeException {
+//		  return this.daoHelper.insert(this.projectStatusDao, attrMap);
+//	}
+//
+//	@Override
+//	public EntityResult projectStatusUpdate(Map<String, Object> attrMap, Map<String, Object> keyMap)
+//			throws OntimizeJEERuntimeException {
+//		  return this.daoHelper.update(this.projectStatusDao, attrMap, keyMap);
+//	}
+//
+//	@Override
+//	public EntityResult projectStatusDelete(Map<String, Object> keyMap) throws OntimizeJEERuntimeException {
+//		  return this.daoHelper.delete(this.projectStatusDao, keyMap);
+//	}
+//	
 	@Override
 	public EntityResult projectDetailsQuery(Map<String, Object> keyMap, List<String> attrList)
 			throws OntimizeJEERuntimeException {
 		return this.daoHelper.query(this.projectsDao, keyMap, attrList, ProjectsDao.QUERY_DETAILS);
 	}
-
+	
+//	@Override
+//	public EntityResult projectDetailsInsert(Map<String, Object> attrMap) throws OntimizeJEERuntimeException {
+//		  return this.daoHelper.insert(this.projectsDao, attrMap);
+//	}
+//	
+//	@Override
+//	public EntityResult projectDetailsUpdate(Map<String, Object> keyMap, List<String> attrList)
+//			throws OntimizeJEERuntimeException {
+//		return this.daoHelper.query(this.projectsDao, keyMap, attrList, ProjectsDao.QUERY_DETAILS);
+//	}
+//	
+//	@Override
+//	public EntityResult projectDetailsDelete(Map<String, Object> keyMap) throws OntimizeJEERuntimeException {
+//		  return this.daoHelper.delete(this.projectsDao, keyMap);
+//	}
 
 }

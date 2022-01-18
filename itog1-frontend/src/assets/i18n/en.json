@@ -47,5 +47,9 @@
   "INPROCESS_PROJECTS": "In process",
   "FINISHED_PROJECTS": "Finished",
   "DEVELOPERS": "Developers",
-  "MANAGERS": "Managers"
+  "MANAGERS": "Managers",
+  "EMPLOYEE": "Employee",
+  "SELECT_EMPLOYEE": "Select employee",
+  "PROJECT": "Project",
+  "SELECT_PROJECT": "Select project"
 }

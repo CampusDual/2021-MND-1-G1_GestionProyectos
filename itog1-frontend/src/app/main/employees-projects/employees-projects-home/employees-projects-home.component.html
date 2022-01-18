@@ -1,10 +1,11 @@
 <div class="full-page">
-<o-form-layout-manager title="{{'EMPLOYEESPROJECTS' | oTranslate }}" separator=" " mode="tab" label-columns="id_project;project_name">
+<o-form-layout-manager title="{{'EMPLOYEESPROJECTS' | oTranslate }}" separator=" " mode="dialog">
   <div fxFill>
    <o-table fxFlex #employeesProjectsTable attr="employeesProjectsTable" service="employees" entity="employeeProjectDetails" keys="id_employee_project"
      columns="id_employee_project;id_employee;id_project;employee_involvement_in_project;project_name;employee_name;surname"
      visible-columns="project_name;employee_name;surname;employee_involvement_in_project"
      query-rows="15" delete-button="no">
+     <o-table-column attr="employee_involvement_in_project" type="percentage" value-base="1"></o-table-column>
    </o-table>
   </div>
  </o-form-layout-manager>

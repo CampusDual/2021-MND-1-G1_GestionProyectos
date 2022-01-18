@@ -13,9 +13,9 @@ public interface IProjectsService {
 	 public EntityResult projectUpdate(Map<String, Object> attrMap, Map<String, Object> keyMap) throws OntimizeJEERuntimeException;
 	 public EntityResult projectDelete(Map<String, Object> keyMap) throws OntimizeJEERuntimeException;
 	 public EntityResult projectStatusQuery(Map<String, Object> keyMap, List<String> attrList) throws OntimizeJEERuntimeException;
-	 public EntityResult projectStatusInsert(Map<String, Object> attrMap) throws OntimizeJEERuntimeException;
-	 public EntityResult projectStatusUpdate(Map<String, Object> attrMap, Map<String, Object> keyMap) throws OntimizeJEERuntimeException;
-	 public EntityResult projectStatusDelete(Map<String, Object> keyMap) throws OntimizeJEERuntimeException;
+//	 public EntityResult projectStatusInsert(Map<String, Object> attrMap) throws OntimizeJEERuntimeException;
+//	 public EntityResult projectStatusUpdate(Map<String, Object> attrMap, Map<String, Object> keyMap) throws OntimizeJEERuntimeException;
+//	 public EntityResult projectStatusDelete(Map<String, Object> keyMap) throws OntimizeJEERuntimeException;
 	 public EntityResult projectDetailsQuery(Map<String, Object> keyMap, List<String> attrList) throws OntimizeJEERuntimeException;
 //	 public EntityResult projectDetailsInsert(Map<String, Object> attrMap) throws OntimizeJEERuntimeException;
 //	 public EntityResult projectDetailsUpdate(Map<String, Object> attrMap, Map<String, Object> keyMap) throws OntimizeJEERuntimeException;

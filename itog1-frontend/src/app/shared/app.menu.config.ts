@@ -4,13 +4,13 @@ import { EmployeeCardComponent } from './employee-card/employee-card.component';
 import { ProjectCardComponent } from './project-card/project-card.component';
 
 export const MENU_CONFIG: MenuRootItem[] = [
-  { id: 'home', name: 'HOME', icon: 'home', route: '/main/home' },
+  { id: 'home', name: 'HOME', icon: 'donut_large', route: '/main/home' },
   {
-    id: 'modules', name: 'MODULES', icon: 'remove_red_eye', opened: true,
+    id: 'modules', name: 'MODULES', icon: 'list', opened: true,
     items: [
-      { id: 'employees', name: 'EMPLOYEES', icon: 'people', route: '/main/employees', component: EmployeeCardComponent},
-      { id: 'employeesProjects', name: 'EMPLOYEESPROJECTS', icon: 'account_balance', route: '/main/employeesProjects', component: AssignmentCardComponent},
-      { id: 'projects', name: 'PROJECTS', icon: 'business_center', route: '/main/projects', component: ProjectCardComponent},
+      { id: 'employees', name: 'EMPLOYEES', icon: 'engineering', route: '/main/employees', component: EmployeeCardComponent},
+      { id: 'employeesProjects', name: 'EMPLOYEESPROJECTS', icon: 'addchart', route: '/main/employeesProjects', component: AssignmentCardComponent},
+      { id: 'projects', name: 'PROJECTS', icon: 'handyman', route: '/main/projects', component: ProjectCardComponent},
          ]
   },
   { id: 'logout', name: 'LOGOUT', route: '/login', icon: 'power_settings_new', confirm: 'yes' }

@@ -295,21 +295,21 @@ public class EmployeesService implements IEmployeesService {
 		return this.daoHelper.query(this.jobRoleDao, keyMap, attrList);
 	}
 
-	@Override
-	public EntityResult jobRoleInsert(Map<String, Object> attrMap) throws OntimizeJEERuntimeException {
-		return this.daoHelper.insert(this.jobRoleDao, attrMap);
-	}
-
-	@Override
-	public EntityResult jobRoleUpdate(Map<String, Object> attrMap, Map<String, Object> keyMap)
-			throws OntimizeJEERuntimeException {
-		return this.daoHelper.update(this.jobRoleDao, attrMap, keyMap);
-	}
-
-	@Override
-	public EntityResult jobRoleDelete(Map<String, Object> keyMap) throws OntimizeJEERuntimeException {
-			return this.daoHelper.delete(this.jobRoleDao, keyMap);
-	}
+//	@Override
+//	public EntityResult jobRoleInsert(Map<String, Object> attrMap) throws OntimizeJEERuntimeException {
+//		return this.daoHelper.insert(this.jobRoleDao, attrMap);
+//	}
+//
+//	@Override
+//	public EntityResult jobRoleUpdate(Map<String, Object> attrMap, Map<String, Object> keyMap)
+//			throws OntimizeJEERuntimeException {
+//		return this.daoHelper.update(this.jobRoleDao, attrMap, keyMap);
+//	}
+//
+//	@Override
+//	public EntityResult jobRoleDelete(Map<String, Object> keyMap) throws OntimizeJEERuntimeException {
+//			return this.daoHelper.delete(this.jobRoleDao, keyMap);
+//	}
 	
 	@Override
 	public EntityResult employeeDetailsQuery(Map<String, Object> keyMap, List<String> attrList)
