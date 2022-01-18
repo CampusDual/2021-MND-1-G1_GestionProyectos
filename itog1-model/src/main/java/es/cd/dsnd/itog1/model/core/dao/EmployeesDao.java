@@ -15,6 +15,7 @@ public class EmployeesDao extends OntimizeJdbcDaoSupport{
 	 public static final String ATTR_NAME = "name";
 	 public static final String ATTR_SURNAME = "surname";
 	 public static final String ATTR_JOB = "job";
+	 public static final String QUERY_DETAILS = "details";
 	
 }
 

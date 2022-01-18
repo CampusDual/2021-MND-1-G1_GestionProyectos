@@ -12,4 +12,22 @@
   <Column>id_employee</Column>
  </UpdateKeys>
  <GeneratedKey>id_employee</GeneratedKey>
+ 
+
+ <Queries>
+  <Query id="details">
+   <Sentence>
+   <![CDATA[
+     SELECT
+      #COLUMNS#
+     FROM
+      public.employees e
+     INNER JOIN public.job_role j ON
+      e.job = j.id_job
+     #WHERE#
+   ]]>
+   </Sentence>
+  </Query>
+ </Queries>
+ 
 </JdbcEntitySetup>

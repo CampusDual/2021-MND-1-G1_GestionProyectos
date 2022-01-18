@@ -8,6 +8,7 @@ import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Service;
 
 import es.cd.dsnd.itog1.api.core.service.IProjectsService;
+import es.cd.dsnd.itog1.model.core.dao.ProjectStatusDao;
 import es.cd.dsnd.itog1.model.core.dao.ProjectsDao;
 
 import com.ontimize.jee.common.dto.EntityResult;
@@ -25,6 +26,9 @@ public class ProjectsService implements IProjectsService {
 
 	@Autowired
 	private DefaultOntimizeDaoHelper daoHelper;
+	
+	@Autowired
+	private ProjectStatusDao projectStatusDao;
 
 	@Override
 	public EntityResult projectQuery(Map<String, Object> keyMap, List<String> attrList)
@@ -47,5 +51,34 @@ public class ProjectsService implements IProjectsService {
 	public EntityResult projectDelete(Map<String, Object> keyMap) throws OntimizeJEERuntimeException {
 		  return this.daoHelper.delete(this.projectsDao, keyMap);
 	}
+	
+	@Override
+	public EntityResult projectStatusQuery(Map<String, Object> keyMap, List<String> attrList)
+			throws OntimizeJEERuntimeException {
+		return this.daoHelper.query(this.projectStatusDao, keyMap, attrList);
+	}
+
+	@Override
+	public EntityResult projectStatusInsert(Map<String, Object> attrMap) throws OntimizeJEERuntimeException {
+		  return this.daoHelper.insert(this.projectStatusDao, attrMap);
+	}
+
+	@Override
+	public EntityResult projectStatusUpdate(Map<String, Object> attrMap, Map<String, Object> keyMap)
+			throws OntimizeJEERuntimeException {
+		  return this.daoHelper.update(this.projectStatusDao, attrMap, keyMap);
+	}
+
+	@Override
+	public EntityResult projectStatusDelete(Map<String, Object> keyMap) throws OntimizeJEERuntimeException {
+		  return this.daoHelper.delete(this.projectStatusDao, keyMap);
+	}
+	
+	@Override
+	public EntityResult projectDetailsQuery(Map<String, Object> keyMap, List<String> attrList)
+			throws OntimizeJEERuntimeException {
+		return this.daoHelper.query(this.projectsDao, keyMap, attrList, ProjectsDao.QUERY_DETAILS);
+	}
+
 
 }

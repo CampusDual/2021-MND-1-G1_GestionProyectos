@@ -14,6 +14,7 @@ public class ProjectsDao extends OntimizeJdbcDaoSupport{
 	 public static final String ATTR_ID = "id_project";
 	 public static final String ATTR_NAME = "name";
 	 public static final String ATTR_STATUS = "status";
+	 public static final String QUERY_DETAILS= "details";
 	
 }
 

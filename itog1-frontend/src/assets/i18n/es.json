@@ -33,8 +33,7 @@
   "id_employee_project": "ID Asignación",
   "employee_name": "Nombre del Empleado",
   "project_name": "Nombre del Proyecto",
-  "status": "Estado",
-  "job": "Cargo",
+  "job_name": "Cargo",
   "MODULES": "Módulos",
   "PROJECTS_ASSIGNMENTS": "Asignaciones de Proyectos",
   "EMPLOYEES_ASSIGNMENTS": "Asignaciones de Empleados",
@@ -50,9 +49,10 @@
   "Working": "En curso",
   "Finished": "Finalizado",
   "Developer": "Desarrollador/a",
-  "In Charge": "Encargado/a",
+  "Manager": "Encargado/a",
   "Select status": "Seleccionar estado",
   "Select job": "Seleccionar cargo",
   "DEVELOPERS": "Desarrolladores",
-  "INCHARGE": "Encargados"
+  "MANAGERS": "Encargados",
+  "status_name": "Estado"
 }

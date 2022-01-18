@@ -12,6 +12,7 @@ import org.springframework.stereotype.Service;
 import es.cd.dsnd.itog1.api.core.service.IEmployeesService;
 import es.cd.dsnd.itog1.model.core.dao.EmployeesDao;
 import es.cd.dsnd.itog1.model.core.dao.EmployeesProjectsDao;
+import es.cd.dsnd.itog1.model.core.dao.JobRoleDao;
 import es.cd.dsnd.itog1.model.core.dao.ProjectsDao;
 
 import com.ontimize.jee.common.dto.EntityResult;
@@ -32,6 +33,9 @@ public class EmployeesService implements IEmployeesService {
 	@Autowired
 	private DefaultOntimizeDaoHelper daoHelper;
 
+	@Autowired
+	private JobRoleDao jobRoleDao;
+	
 	@Override
 	public EntityResult employeeQuery(Map<String, Object> keyMap, List<String> attrList)
 			throws OntimizeJEERuntimeException {
@@ -285,4 +289,32 @@ public class EmployeesService implements IEmployeesService {
 //	return this.daoHelper.delete(this.employeesProjectsDao, keyMap);
 //}
 
+	@Override
+	public EntityResult jobRoleQuery(Map<String, Object> keyMap, List<String> attrList)
+			throws OntimizeJEERuntimeException {
+		return this.daoHelper.query(this.jobRoleDao, keyMap, attrList);
+	}
+
+	@Override
+	public EntityResult jobRoleInsert(Map<String, Object> attrMap) throws OntimizeJEERuntimeException {
+		return this.daoHelper.insert(this.jobRoleDao, attrMap);
+	}
+
+	@Override
+	public EntityResult jobRoleUpdate(Map<String, Object> attrMap, Map<String, Object> keyMap)
+			throws OntimizeJEERuntimeException {
+		return this.daoHelper.update(this.jobRoleDao, attrMap, keyMap);
+	}
+
+	@Override
+	public EntityResult jobRoleDelete(Map<String, Object> keyMap) throws OntimizeJEERuntimeException {
+			return this.daoHelper.delete(this.jobRoleDao, keyMap);
+	}
+	
+	@Override
+	public EntityResult employeeDetailsQuery(Map<String, Object> keyMap, List<String> attrList)
+			throws OntimizeJEERuntimeException {
+		return this.daoHelper.query(this.employeesDao, keyMap, attrList, EmployeesDao.QUERY_DETAILS);
+	}
+	
 }

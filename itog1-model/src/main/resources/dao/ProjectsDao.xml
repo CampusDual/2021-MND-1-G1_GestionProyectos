@@ -12,4 +12,21 @@
   <Column>id_project</Column>
  </UpdateKeys>
  <GeneratedKey>id_project</GeneratedKey>
+ 
+  <Queries>
+  <Query id="details">
+   <Sentence>
+   <![CDATA[
+     SELECT
+      #COLUMNS#
+     FROM
+      public.projects p
+     INNER JOIN public.project_status ps ON
+      p.status = ps.id_status
+     #WHERE#
+   ]]>
+   </Sentence>
+  </Query>
+ </Queries>
+ 
 </JdbcEntitySetup>

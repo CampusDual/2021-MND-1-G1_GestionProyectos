@@ -31,7 +31,7 @@ export class EmployeesDetailComponent implements OnInit {
     jobText: 'Developer'
   },{
     jobCode: 2,
-    jobText: 'In Charge'
+    jobText: 'Manager'
   }];
 
   ngOnInit() {
