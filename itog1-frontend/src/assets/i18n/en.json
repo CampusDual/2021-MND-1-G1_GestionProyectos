@@ -51,5 +51,6 @@
   "EMPLOYEE": "Employee",
   "SELECT_EMPLOYEE": "Select employee",
   "PROJECT": "Project",
-  "SELECT_PROJECT": "Select project"
+  "SELECT_PROJECT": "Select project",
+  "manager": "Manager"
 }

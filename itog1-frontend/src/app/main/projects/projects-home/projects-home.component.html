@@ -1,7 +1,7 @@
 <div class="full-page">
 <o-form-layout-manager title="{{'PROJECTS' | oTranslate }}" separator=" " mode="tab" label-columns="name">
   <o-table fxFill service="projects" entity="projectDetails" keys="id_project"
-  columns="id_project;name;status_name" visible-columns="name;status_name" delete-button="no" query-rows="15">
+  columns="id_project;name;status_name;manager" visible-columns="name;status_name;manager" delete-button="no" query-rows="15">
   </o-table>
  </o-form-layout-manager>
 </div>

@@ -1,13 +1,17 @@
 <o-form service="projects" entity="project" keys="id_project" header-actions="R;I;U;D" show-header-navigation="yes">
   <o-integer-input attr="id_project" sql-type="INTEGER" enabled="no"></o-integer-input>
-  <o-row>
-    <o-text-input class="input-padding" attr="name" required="yes" fxFlex="40"></o-text-input>
+  <o-row>  
+    <o-text-input  attr="name" required="yes" fxFlex="100"></o-text-input>
   </o-row>
   <o-row>
     <o-combo attr="status" read-only="no" label="Select status" [static-data]="statusArray"
       value-column="statusCode" columns="statusCode;statusText"
       visible-columns="statusText" null-selection="no" required="yes" translate="yes">
+      
     </o-combo>
+    <div class="input-padding">
+      <o-text-input  attr="manager" required="yes" fxFlex="600"></o-text-input>
+      </div>
   </o-row>
     <o-column title="{{ 'EMPLOYEES_ASSIGNMENTS' | oTranslate }}">
     <o-table #projectsTable attr="projectsTable" service="employees" entity="employeeProjectDetails" parent-keys="id_project"

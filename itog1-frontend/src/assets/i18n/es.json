@@ -45,7 +45,7 @@
   "PENDING_PROJECTS": "Pendientes",
   "INPROCESS_PROJECTS": "En curso",
   "FINISHED_PROJECTS": "Terminados",
-  "Pending": "Pendinte",
+  "Pending": "Pendiente",
   "Working": "En curso",
   "Finished": "Finalizado",
   "Developer": "Desarrollador/a",
@@ -58,5 +58,6 @@
   "EMPLOYEE": "Empleado/a",
   "SELECT_EMPLOYEE": "Seleccione un/a empleado/a de la lista",
   "PROJECT": "Proyecto",
-  "SELECT_PROJECT": "Seleccione un proyecto de la lista"
+  "SELECT_PROJECT": "Seleccione un proyecto de la lista",
+  "manager": "Encargado/a"
 }
